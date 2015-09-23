@@ -1,0 +1,150 @@
+#include <iostream>
+#include "FileUtility.h"
+
+#ifdef __ANDROID__
+#include <JNIBridge.h>
+#endif
+
+unsigned int FileUtility::getFilesCountFromDir(boost::filesystem::path dir) {
+	unsigned int count = 0;
+	boost::filesystem::directory_iterator dir_it(dir);
+
+	while (dir_it != boost::filesystem::directory_iterator()) {
+		if (boost::filesystem::is_regular_file(*dir_it))
+			++count;
+		++dir_it;
+	}
+	return count;
+}
+
+std::vector<std::string> FileUtility::getFilesFromDir(boost::filesystem::path dir) {
+	std::vector<std::string> files;
+	boost::filesystem::directory_iterator dir_it(dir);
+
+	while (dir_it != boost::filesystem::directory_iterator()) {
+		if (boost::filesystem::is_regular_file(*dir_it)) {
+#ifdef WIN32
+			std::wstring ws(dir_it->path().filename().c_str());
+			char s[_MAX_PATH];
+			wcstombs(s, ws.c_str(), _MAX_PATH);
+#else
+			std::string s = dir_it->path().filename().c_str();
+#endif
+			files.push_back(s);
+		}
+		++dir_it;
+	}
+	return files;
+}
+
+std::vector<std::string> FileUtility::getSubDirsFromDir(boost::filesystem::path dir) {
+	std::vector<std::string> subDirs;
+	boost::filesystem::directory_iterator dir_it(dir);
+
+	while (dir_it != boost::filesystem::directory_iterator()) {
+		if (boost::filesystem::is_directory(*dir_it))
+			if (dir_it->path().filename().c_str()[0] != '.') {
+#ifdef WIN32
+				std::wstring ws(dir_it->path().filename().c_str());
+				char s[_MAX_PATH];
+				wcstombs(s, ws.c_str(), _MAX_PATH);
+#else
+				std::string s = dir_it->path().filename().c_str();
+#endif
+				subDirs.push_back(s);
+			}
+		++dir_it;
+	}
+	return subDirs;
+}
+
+unsigned int FileUtility::getSubDirsCountFromDir(boost::filesystem::path dir) {
+	boost::filesystem::directory_iterator dir_it(dir);
+	unsigned int count = 0;
+
+	while (dir_it != boost::filesystem::directory_iterator()) {
+		if (boost::filesystem::is_directory(*dir_it))
+			if (dir_it->path().filename().c_str()[0] != '.')
+				++count;
+		++dir_it;
+	}
+	return count;
+}
+
+void FileUtility::traceResPath() {
+	std::cout << "Path to resources is set to:" << std::endl;
+	std::cout << '\t' << m_resPath << std::endl;
+	std::cout << "To change the path use -r <path> key" << std::endl;
+}
+
+FileUtility::FileUtility(char *argPath) {
+#ifdef _WIN32
+	m_appPath = argPath;
+	m_appPath = m_appPath.parent_path();
+	// m_resPath = m_appPath;
+	m_resPath = ".\\";
+	m_usrPath = m_resPath;
+#endif //_WIN32
+
+#ifdef __ANDROID__
+	m_appPath = JNIBridge::singleton().getDataPath();
+	m_resPath = m_appPath;
+	m_usrPath = m_appPath;
+#endif
+
+/*#if defined linux || defined __FreeBSD__
+#ifndef INSTALL_PREFIX
+#define INSTALL_PREFIX "/usr/local";
+#endif //INSTALL_PREFIX
+	m_appPath = INSTALL_PREFIX;
+	m_appPath /= "bin";
+#ifndef DATA_INSTALL_DIR
+	m_resPath = m_appPath;
+	m_resPath /= "../share/violetland";
+#else //DATA_INSTALL_DIR
+	m_resPath = DATA_INSTALL_DIR;
+#endif //DATA_INSTALL_DIR
+	m_usrPath = getenv("HOME");
+	m_usrPath /= ".config";
+	mkdir(m_usrPath.string().c_str(), S_IRWXU | S_IRGRP | S_IROTH);
+	m_usrPath /= "violetland";
+	mkdir(m_usrPath.string().c_str(), S_IRWXU | S_IRGRP | S_IROTH);
+#endif //linux || __FreeBSD__*/
+	traceResPath();
+}
+
+void FileUtility::setFullResPath(std::string path) {
+	m_resPath = path;
+	traceResPath();
+}
+
+boost::filesystem::path FileUtility::getFullPath(PathType type, std::string resource) const {
+	boost::filesystem::path path(m_resPath);
+	boost::filesystem::path usrPath(m_usrPath);
+
+	switch (type) {
+	case FileUtility::image:
+		path /= "images";
+		return path /= resource;
+	case FileUtility::anima:
+		path /= "images";
+		path /= "anima";
+		return path /= resource;
+	case FileUtility::sound:
+		path /= "sounds";
+		return path /= resource;
+	case FileUtility::music:
+		path /= "music";
+		return path /= resource;
+	case FileUtility::monsters:
+		path /= "monsters";
+		return path /= resource;
+	case FileUtility::weapon:
+		path /= "weapon";
+		return path /= resource;
+	case FileUtility::user:
+		return usrPath /= resource;
+	default:
+		return path /= resource;
+	}
+}

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Violetland</string>
+    
+    <string name="flurry_app_id">PUT YOUR VALUE HERE</string>
+    
+    <string name="appodeal_app_key">PUT YOUR VALUE HERE</string>
+    
+    <string name="fortumo_service_id">PUT YOUR VALUE HERE</string>
+    <string name="fortumo_in_app_secret">PUT YOUR VALUE HERE</string>
+    
+    <!-- Google Services API -->
+    <string name="app_id">602839805732</string>
+    <string name="leaderboard_attackwaves">PUT YOUR VALUE HERE</string>
+    <string name="leaderboard_survival">PUT YOUR VALUE HERE</string>
+    <string name="achievement_survive_1_minute">PUT YOUR VALUE HERE</string>
+    <string name="achievement_survive_5_minutes">PUT YOUR VALUE HERE</string>
+    <string name="achievement_survice_10_minutes">PUT YOUR VALUE HERE</string>
+    <string name="achievement_survive_15_minutes">PUT YOUR VALUE HERE</string>
+    <string name="achievement_survive_20_minutes">PUT YOUR VALUE HERE</string>
+    
+    <string name="wait_please">Please wait...</string>
+    <string name="we_cannot_process_your_purchase">Unfortunately, we cannot process your purchase at this moment :(\nPlease check your network connection and try again.</string>
+    <string name="choose_purchase_method">Choose purchase method</string>
+    <string name="you_can_purchase_perk_points_using">You can purchase Perk points using your Google Play account or Phone balance.\nPurchased points will be availble in Character menu.</string>
+    <string name="error">Error</string>
+    <string name="how_many_perk_points">How many Perk points?</string>
+    <string name="phone">Phone</string>
+    <string name="unfortunately_purchase_delivery_failed">Unfortunately, purchase delivery failed :(\nYou will receive your Perk points later.</string>
+    <string name="purchase_perk_points">Purchase perk points</string>
+
+    <string name="accuracy_deviation_modifier___i__">Accuracy deviation modifier: %i%%</string>
+    <string name="agility___i">Agility: %i</string>
+    <string name="all_have_been_frozen_around_you_">All have been frozen around you.</string>
+    <string name="attack_waves">Attack waves</string>
+    <string name="available_improvement_points___i">Available improvement points: %i</string>
+    <string name="back_to_main_menu">Back to main menu</string>
+    <string name="big_calibre">Big calibre</string>
+    <string name="big_calibre__your_bullets_can_wound_a_few_monsters_in_a_row_">Big calibre: your bullets can wound a few monsters in a row.</string>
+    <string name="bind_action__s_to__s__n" formatted="false">Bind action %s to %s.\n</string>
+    <string name="boom_">Boom!</string>
+    <string name="chance_of_block___i__">Chance of block: %i%%</string>
+    <string name="controls">Controls</string>
+    <string name="current_player_level___i">Current player level: %i</string>
+    <string name="drawing_splash_screen____n">Drawing splash screen...\n</string>
+    <string name="edit_controls">Edit Controls</string>
+    <string name="enter_your_name_">Enter your name:</string>
+    <string name="exit">Exit</string>
+    <string name="fps___i">FPS: %i</string>
+    <string name="fire">Fire</string>
+    <string name="friendly_fire">Friendly fire</string>
+    <string name="fullscreen">Fullscreen</string>
+    <string name="gameplay">Gameplay</string>
+    <string name="get_ready_to_new_wave_">Get ready to new wave!</string>
+    <string name="graphics">Graphics</string>
+    <string name="grenades___i">Grenades: %i</string>
+    <string name="hp___i___max_hp___i" formatted="false">HP: %i / Max HP: %i</string>
+    <string name="health_regeneration____2f_min">Health regeneration: %.2f/min</string>
+    <string name="help">Help</string>
+    <string name="high_scores">High scores</string>
+    <string name="highscores">Highscores</string>
+    <string name="hot_video_mode_changing_is_not_supported_on_windows_now__you_should_restart_the_game_">Hot video mode changing is not supported on windows now. You should restart the game.</string>
+    <string name="looting">Looting</string>
+    <string name="looting__monsters_will_drop_more_bonuses_">Looting: Monsters will drop more bonuses.</string>
+    <string name="melee_damage___i">Melee damage: %i</string>
+    <string name="menu">Menu</string>
+    <string name="menuclicka">MenuClickA</string>
+    <string name="menuclickb">MenuClickB</string>
+    <string name="move_down">Move Down</string>
+    <string name="move_left">Move Left</string>
+    <string name="move_right">Move Right</string>
+    <string name="move_up">Move Up</string>
+    <string name="move_mouse_over_text_to_get_explantation___">Move mouse over text to get explantation...</string>
+    <string name="music_volume">Music volume</string>
+    <string name="name">Name</string>
+    <string name="name_found____s_n">Name found : %s\n</string>
+    <string name="night_vision">Night vision</string>
+    <string name="night_vision__you_can_see_in_the_dark_">Night vision: you can see in the dark.</string>
+    <string name="options">Options</string>
+    <string name="pause">PAUSE</string>
+    <string name="pause_">Pause</string>
+    <string name="perks_">Perks:</string>
+    <string name="pick_up">Pick Up</string>
+    <string name="please_wait___">Please wait...</string>
+    <string name="poison_bullets">Poison bullets</string>
+    <string name="poison_bullets__after_getting_hit_by_your_bullet__enemies_slowly_lose_health_until_they_die_">Poison bullets: after getting hit by your bullet, enemies slowly lose health until they die.</string>
+    <string name="preparing_sound_systems____n">Preparing sound systems...\n</string>
+    <string name="preparing_window____n">Preparing window...\n</string>
+    <string name="press_a_key__please___">Press a key, please...</string>
+    <string name="reload">Reload</string>
+    <string name="reloading_speed_modifier___i__">Reloading speed modifier: %i%%</string>
+    <string name="reset_controls">Reset Controls</string>
+    <string name="reset_list">Reset list</string>
+    <string name="resolution">Resolution</string>
+    <string name="restart">Restart</string>
+    <string name="resume">Resume</string>
+    <string name="save_and_return">Save and return</string>
+    <string name="shoot_monsters_to_receive_experience_and_other_bonuses_">Shoot monsters to receive experience and other bonuses.</string>
+    <string name="show_char">Show Char</string>
+    <string name="sound">Sound</string>
+    <string name="sound_volume">Sound volume</string>
+    <string name="start">Start</string>
+    <string name="str_agil_vital">Str/Agil/Vital</string>
+    <string name="strength___i">Strength: %i</string>
+    <string name="telekinesis">Telekinesis</string>
+    <string name="telekinesis__useful_things_slowly_move_towards_you_">Telekinesis: useful things slowly move towards you.</string>
+    <string name="teleport">Teleport</string>
+    <string name="teleports___i">Teleports: %i</string>
+    <string name="they_have_overcome___">They have overcome...</string>
+    <string name="throw_grenade">Throw Grenade</string>
+    <string name="time">Time</string>
+    <string name="toggle_laser">Toggle Laser</string>
+    <string name="toggle_light">Toggle Light</string>
+    <string name="try_to_survive_as_long_as_you_can_">Try to survive as long as you can.</string>
+    <string name="unknown">Unknown</string>
+    <string name="unknown_event">Unknown event</string>
+    <string name="unstoppable">Unstoppable</string>
+    <string name="unstoppable__enemies_can_t_block_your_movement_any_more__but_they_still_can_hurt_you_">Unstoppable: enemies can\'t block your movement any more, but they still can hurt you.</string>
+    <string name="violetland_survival">Violetland Survival</string>
+    <string name="vitality___i">Vitality: %i</string>
+    <string name="weapon_autoreloading">Weapon autoreloading</string>
+    <string name="weapon_autotaking">Weapon autotaking</string>
+    <string name="wide_sight">Wide sight</string>
+    <string name="wide_sight__accessible_area_for_action_is_much_more_">Wide sight: accessible area for action is much more.</string>
+    <string name="xp">XP</string>
+    <string name="you_are_gobbled_up_">You are gobbled up.</string>
+    <string name="you_got_a_agility_boost_">You got a agility boost.</string>
+    <string name="you_got_a_strength_boost_">You got a strength boost.</string>
+    <string name="you_got_a_vitality_boost_">You got a vitality boost.</string>
+    <string name="you_got_powerful_penetration_bullets_">You got powerful penetration bullets.</string>
+    <string name="you_have_earned__i_points_">You have earned %i points.</string>
+    <string name="you_have_reached_new_level_">You have reached new level.</string>
+    <string name="you_have_taken_a_grenade_">You have taken a grenade.</string>
+    <string name="you_have_taken_a_medical_kit_">You have taken a medical kit.</string>
+    <string name="you_have_taken_a_teleport_">You have taken a teleport.</string>
+    <string name="you_have_taken_the__s_">You have taken the %s.</string>
+    <string name="a_hand_grenade">a hand grenade</string>
+    <string name="a_medikit">a medikit</string>
+    <string name="a_nitrogen_bomb">a nitrogen bomb</string>
+    <string name="a_teleport">a teleport</string>
+    <string name="agility_boost">agility boost</string>
+    <string name="nuke_">nuke!</string>
+    <string name="penetration_bullets">penetration bullets</string>
+    <string name="strength_boost">strength boost</string>
+    <string name="vitality_boost">vitality boost</string>
+    
+    <string name="back">Back</string>
+    <string name="strong_">Strong</string>
+    <string name="fast_">Fast</string>
+    <string name="healthy_">Healthy</string>
+    <string name="regular_">Regular</string>
+    <string name="available_perk_points___i">Available perk points: %i</string>
+    <string name="available_perk_points___i___i" formatted="false">Available perk points: %i + %i</string>
+    <string name="press_back_key_to_continue__">Press Back key to continue.</string>
+    <string name="highscore___">Highscore!!!</string>
+    <string name="about">About</string>
+    <string name="purchase">Purchase</string>
+	
+</resources>
